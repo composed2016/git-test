@@ -1,16 +1,18 @@
 #/usr/bin/python3
 # coding: utf-8
+
 import time
 
 print(time.ctime())
-time_list=time.localtime()
-hours=time_list[3]
-print(hours)
-if 5 <= int(hours) <= 12:
-    print('утро')
- elif 13 <= int(hours) <= 20:
-     
-     print('день')
+name = input('Введите свой логин: ' )
+time_list = time.localtime()
+hours = time_list[3]
+if 5 < int(hours) < 12:
+    print("Доброго утра,",name)
+elif 12 < int(hours) < 18:
+    print("Доброго деня,",name)
+elif 18 < int(hours) < 22:
+    print("Доброго вечера,",name)
 else:
-   print('вечер')
+    print("Доброй ночи,",name)
 
