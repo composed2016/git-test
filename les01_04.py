@@ -42,7 +42,7 @@ while answer != 'q':
             print("Платформа: ", sys.platform)
             print("Кодировка файловой системы: ", sys.getfilesystemencoding())
             print("Текущая директория: ", os.getcwd())
-            print("Текущая пользователь: ", os.getlogin())
+            print("Текущий пользователь: ", os.getlogin())
             
         elif do == 3:
             print(psutil.pids())
