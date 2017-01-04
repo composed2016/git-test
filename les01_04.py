@@ -30,9 +30,10 @@ while answer != 'q':
         print(" [2] - выведу информацию о системе")
         print(" [3] - выведу список процессов")
         print(" [4] - продублирую файлы в текущей директории")
-        
+        print(" [5] - удалю файл или дубликат файла")
+        print(" [9] - вернусь к предыдущему вопросу")
+
         do = int(input("Укажите номер действия: "))
-        
         if do == 1:
             print(os.listdir())
             
@@ -57,7 +58,9 @@ while answer != 'q':
                 if os.path.isfile(file_list[i]):
                     shutil.copy(file_list[i], file_list[i] + '.dupl')
                 # Чтобы цикл имел возможность завершиться нужно изменять переменную цикла        
-                i += 1    
+                i += 1   
+        elif do == 5:
+            print(os.rename()) 
         else:
             pass
        
